@@ -3,15 +3,19 @@
 Логин: hseguest
 Пароль: hsepassword
 
+--Интересное--
 https://colab.research.google.com/
 https://v.thecode.media/x0pw7
 https://pythontutor.ru/lessons/inout_and_arithmetic_operations/
 
+--Главное--
 https://docs.google.com/spreadsheets/d/1Ioxsy-w7blueeKkMWauHP5eF5wtWEpW7DJvtAOxKKxU/edit#gid=174136418
 https://miro.com/app/board/uXjVOzqV4V8=/?share_link_id=610014062406
 https://github.com/karpovmax/DPO_Python_DA6
 https://anytask.org/ (hxZX0NX)
 
-https://disk.yandex.ru/i/Bpel8amzbXx4nQ
-https://disk.yandex.ru/i/2xzvbz2QnEZ6GA
-https://disk.yandex.ru/i/ouaPgi1weWaekQ
+--Занятия--
+https://disk.yandex.ru/i/Bpel8amzbXx4nQ - Основные понятия
+https://disk.yandex.ru/i/2xzvbz2QnEZ6GA - Условия
+https://disk.yandex.ru/i/ouaPgi1weWaekQ - Списки со товарищи
+https://disk.yandex.ru/d/vKY6kdbe5KZXYw - Семинар 1
