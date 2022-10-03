@@ -14,9 +14,14 @@ https://miro.com/app/board/uXjVOzqV4V8=/?share_link_id=610014062406
 https://github.com/karpovmax/DPO_Python_DA6
 https://anytask.org/ (hxZX0NX)
 
+https://official.contest.yandex.ru/contest/40892/enter/
+hse-da6-2022-2
+dRH7KEXszN
+
 --Занятия--
 https://disk.yandex.ru/i/Bpel8amzbXx4nQ - 14.09.2022 - Основные понятия
 https://disk.yandex.ru/i/2xzvbz2QnEZ6GA - 17.09.2022 - Условия
 https://disk.yandex.ru/i/ouaPgi1weWaekQ - 21.09.2022 - Коллекции
 https://disk.yandex.ru/d/vKY6kdbe5KZXYw - 24.09.2022 - Семинар 1
 https://disk.yandex.ru/i/zFamyR08C0u-Og - 28.09.2022 - Вложенные коллекции, функции
+https://disk.yandex.ru/i/Q2CdGnw2YsBoTA - 01.10.2022 - Функции, рекурсия, регулярные выражения
