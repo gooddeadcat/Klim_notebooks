@@ -29,3 +29,4 @@ https://disk.yandex.ru/i/zFamyR08C0u-Og - 28.09.2022 - Вложенные кол
 https://disk.yandex.ru/i/Q2CdGnw2YsBoTA - 01.10.2022 - Функции, рекурсия, регулярные выражения
 https://disk.yandex.ru/d/c1x5yLYu5UWp2A - 06.10.2022 - Регулярные выражения, работа с файлами
 https://disk.yandex.ru/d/ulxd-4Kuz6GdPw - 08.10.2022 - Классы
+https://disk.yandex.ru/i/wnblROSXrCNGfg - 12.10.2022 - Парсинг
