@@ -1,0 +1,264 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+import time
+from tqdm.notebook import tqdm
+
+import warnings
+warnings.filterwarnings("ignore")
+
+! pip install fake_useragent
+
+from fake_useragent import UserAgent
+UserAgent().chrome
+
+url = 'https://www.chitai-gorod.ru/catalog/books/khudozhestvennaya_literatura-9657/'
+response = requests.get(url, headers={'User-Agent': UserAgent().chrome})
+response
+
+url = 'https://www.chitai-gorod.ru/catalog/books/khudozhestvennaya_literatura-9657/'
+response = requests.get(url)
+response
+
+len(response.content)
+
+response.content
+
+tree = BeautifulSoup(response.content, 'html.parser')
+print(tree)
+
+import requests
+from bs4 import BeautifulSoup
+
+def eapteka_pain(p):
+    
+    # изготовили ссылку
+    url = 'https://www.eapteka.ru/goods/drugs/pain/'
+    
+    # сходили по ней
+    response = requests.get(url)
+    
+    # построили дерево 
+    tree = BeautifulSoup(response.content, 'html.parser')
+    
+    # нашли в нём всё самое интересное
+    drugs = tree.find_all('section', {'class' : 'cc-item'})
+    
+    infa = []
+    
+    for drug in drugs:
+        infa.append({'price': book.find('p', {'class': 'price_color'}).text,
+                     'href': book.h3.a.get('href'),
+                     'title': book.h3.a.get('title')})
+                     
+    return infa
+
+
+
+# изготовили ссылку
+url = 'https://www.chitai-gorod.ru/catalog/books/khudozhestvennaya_literatura-9657/'
+    
+    # сходили по ней
+response = requests.get(url)
+    
+    # построили дерево 
+tree = BeautifulSoup(response.content, 'html.parser')
+    
+    # нашли в нём всё самое интересное
+books = tree.find_all('div', {'class' : 'product-card__info'})
+
+data = []
+    
+    for book in books:
+        data.append({'price': book.find('p', {'class': 'price_color'}).text,
+                     'href': book.h3.a.get('href'),
+                     'title': book.h3.a.get('title')})
+
+# изготовили ссылку
+url = 'https://www.chitai-gorod.ru/catalog/books/khudozhestvennaya_literatura-9657/'
+    
+    # сходили по ней
+response = requests.get(url)
+    
+    # построили дерево 
+tree = BeautifulSoup(response.content, 'html.parser')
+    
+    # нашли в нём всё самое интересное
+books = tree.find_all('div', {'class' : 'product-card__info'})
+
+data = []
+author = []
+price = []
+
+#<span class="publisher">
+#<span class="product-card__data-title">Издательство</span>
+#<span>ОГИ</span>
+
+publisher = []
+href = []
+
+#<button data-book-id="311264" data-element="2955262" data-oldproductprice="" data-productprice="200" data-status="buy" type="button">
+
+book_id = []
+element_id = []
+    
+for book in books:
+    data.append({'Название': book.find('div', {'class': 'product-card__title js-analytic-product-title'}).text.strip()})
+    author.append({'Автор': book.find('div', {'class': 'product-card__author'}).text.strip()})
+    price.append({'Цена': book.find('span', {'class': 'product-price__value'}).text.strip()})
+    publisher.append({'Издательство': book.find('span', {'class': 'publisher'}).text.split('\n')[2]})
+    book_id.append({'ID товара': book.button.get('data-book-id')})
+    element_id.append({'ID элемента': book.button.get('data-element')})
+    href.append({'Ссылка': book.a.get('href')})
+
+print(data)
+print(author)
+print(price)
+print(publisher)
+print(book_id)
+print(element_id)
+print(href)
+
+url = 'https://www.chitai-gorod.ru/catalog/books/khudozhestvennaya_literatura-9657/'
+    
+response = requests.get(url)
+    
+tree = BeautifulSoup(response.content, 'html.parser')
+    
+books = tree.find_all('div', {'class' : 'product-card js_product js__product_card js__slider_item'})
+
+data = []
+author = []
+price = []
+publisher = []
+href = []
+book_id = []
+element_id = []
+    
+for book in books:
+    data.append({'Название': book.find('div', {'class': 'product-card__title js-analytic-product-title'}).text.strip(),
+                 'Автор': book.find('div', {'class': 'product-card__author'}).text.strip(),
+                 'Цена': book.find('span', {'class': 'product-price__value'}).text.strip(),
+                 'Издательство': book.find('span', {'class': 'publisher'}).text.split('\n')[2],
+                 'ID товара': book.get('data-book-id'),
+                 'ID элемента': book.get('data-product'),
+                 'Ссылка': book.a.get('href')})
+
+print(data)
+
+<div class="product-card js_product js__product_card js__slider_item" data-chg-product-preview="" data-chg-id="2954822" data-chg-book-id="2953299" data-chg-position="10" data-chg-price="1668" data-chg-sale-price="" data-book-id="2953299" data-product="2954822" data-chg-book-name="Пираты Венеры: романы" data-productlist="Книги" data-productprice="1668" data-oldproductprice="" data-productbrand="Феникс" data-productcategory="" data-index="0" data-not-avail="">
+		<div class="img-product-block js__img-product-block" style="position:relative;">
+		<a class="product-card__img js-analytic-productlink" href="/catalog/book/2954822/" data-chg-move-link="">
+			<img alt="Пираты Венеры: романы" title="Пираты Венеры: романы" class=" lazyloaded" data-src="https://img-gorod.ru/29/532/2953299_preview.jpg" src="https://img-gorod.ru/29/532/2953299_preview.jpg">
+		</a>
+					</div>
+		<!-- product-card info -->
+	<div class="product-card__info">
+		<a class="product-card__link js-watch-productlink" href="/catalog/book/2954822/" data-chg-move-link="" title="Пираты Венеры: романы">
+			<div class="product-card__title js-analytic-product-title">
+				Пираты Венеры: романы
+			</div>
+			<div class="product-card__author">
+				Берроуз Э.Р.
+			</div>
+		</a>
+		<div class="product-card__data land-view">
+							<span class="publisher">
+					<span class="product-card__data-title">Издательство</span>
+					<span>Феникс</span>
+				</span>&nbsp;
+			
+							<span class="publisher">
+					<span class="product-card__data-title">Год издания</span>
+					<span>2022</span>
+				</span>
+					</div>
+		<div class="product-card__annotation land-view full-short">
+			<span class="short-view">
+				Эта книга перенесет читателя в удивительный и опасный мир древней Венеры. Загадочные расы, принцессы, чудовища, дуэли - все прелести жанра "героической фантастики" в наличии. Приключения неунывающего и бесстрашного героя Карсона описаны мэтром приключенческой...
+			</span>
+			<span class="full-view">Эта книга перенесет читателя в удивительный и опасный мир древней Венеры. Загадочные расы, принцессы, чудовища, дуэли - все прелести жанра "героической фантастики" в наличии. Приключения неунывающего и бесстрашного героя Карсона описаны мэтром приключенческой фантастики Эдгаром Берроузом с присущими ему фантазией и искрометным юмором.</span>
+							<a class="show-more">
+					<span class="full-view">Скрыть</span>
+					<span class="short-view">Показать весь текст</span>
+				</a>
+					</div>
+		<div class="land-view__wrapper">
+			<div class="product-card__price">
+															<span class="product-price__value">1668 ₽</span>
+												</div>
+			<div class="product-card__footer">
+															<div class="note hidden">Начало продаж:&nbsp;<span>октябре 2022</span></div>
+										<button type="button" class="button js__product_card_button product-card__button button_product" data-status="buy" data-type="preorder" data-book-id="2953299" data-chg-book-id="2953299" data-element="2954822" data-productprice="1668" data-oldproductprice="" data-chg-add-to-cart="2953299">
+						<span class="js__card_button_text">Предзаказ</span>
+					</button>
+				
+				<span class="bookmarks_button js__product_bookmarks_button
+				" data-chg-bookmarks="2953299" data-book-id="2953299" data-chg-book-id="2953299" data-element="2954822" data-productprice="1668" data-oldproductprice="">
+					<i class="chg-icon chg-icon-bookmark"></i>
+									</span>
+
+			</div>
+		</div>
+	</div>
+	<!-- /product-card info -->
+</div>
+
+def get_page_chitai_fiction(p):
+
+    if p == 1:
+        url = 'https://www.chitai-gorod.ru/catalog/books/khudozhestvennaya_literatura-9657/'
+    else:
+        url = 'https://www.chitai-gorod.ru/catalog/books/khudozhestvennaya_literatura-9657/?page={}'.format(p)
+
+    response = requests.get(url)
+    tree = BeautifulSoup(response.content, 'html.parser')
+    
+    books = tree.find_all('div', {'class' : 'product-card js_product js__product_card js__slider_item'})
+
+    data = []
+    
+    for book in books:
+        data.append({'Название': book.find('div', {'class': 'product-card__title js-analytic-product-title'}).text.strip(),
+                     'Автор': book.find('div', {'class': 'product-card__author'}).text.strip(),
+                     'Цена': book.find('span', {'class': 'product-price__value'}).text.strip(),
+                     'Издательство': book.find('span', {'class': 'publisher'}).text.split('\n')[2],
+                     'ID товара': book.get('data-book-id'),
+                     'ID элемента': book.get('data-product'),
+                     'Ссылка': book.a.get('href'),
+                     'Страница выдачи': p})
+    return data
+
+feed = []
+for p in range(1, ):
+    try:
+        feed.extend(get_page_chitai_fiction(p))
+    except:
+        feed.extend({'Название': p, 'Автор': p, 'Цена': p, 'Издательство': p, 'ID товара': p, 'ID элемента': p, 'Ссылка': p, 'Страница выдачи': p})
+print(feed)
+
+feed = []
+for p in tqdm(range(1, 6)):
+    try:
+        feed.extend(get_page_chitai_fiction(p))
+    except:
+        feed.extend({'Название': p, 'Автор': p, 'Цена': p, 'Издательство': p, 'ID товара': p, 'ID элемента': p, 'Ссылка': p, 'Страница выдачи': p})
+print(feed)
+
+df = pd.DataFrame(feed)
+print(df.shape)
+df.head()
+
+df.to_csv('parsed_chitay_gorod_hudlit.csv', index=False)
+
+df.to_csv('parsed_chitay_gorod_hudlit.csv', index=False)
+
+get_page_chitai_fiction(2)
+
+<div class="_0MehyttbsN poL5qg-gs+"><h1 data-qa="Title" class="SeP8IA89RG zLJsG1b+y3 YQXBVXAY3p"><span class="OtQfVyMryo">9-ка стопразит</span> <span data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT YsZa4crPd3 f8ZZRVTaCP">Раствор, 350 мл, для приема внутрь, Защита от паразитов</span></h1><div class="Wo69d3F3z0 _8qtihvtXiG"><picture class="cOZloD97BC _8q3zthXhcR" data-qa="Picture"><source media="(max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2)" srcset="https://vseapteki.ru/cropping/thumbnails/101/86871/phoneMedium_retina/"><source media="(max-width: 767px)" srcset="https://vseapteki.ru/cropping/thumbnails/101/86871/phoneMedium_default/"><source media="(min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2)" srcset="https://vseapteki.ru/cropping/thumbnails/101/86871/tabletLarge_retina/"><source media="(min-width: 768px)" srcset="https://vseapteki.ru/cropping/thumbnails/101/86871/tabletLarge_default/"><img src="https://vseapteki.ru/cropping/thumbnails/101/86871/phoneMedium_default/" alt="9-ка стопразит - фото упаковки"></picture><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 eokgV588Xc qbvoVZSPvT xmwinzXDP5 _4CjH9W8Thf _9PQRa64GhD">Внешний вид товара может отличаться от изображения на сайте</div></div><div class="CBmBLKsrh0"><div class="qjzbiOLgcZ"><div class="RMOc0uhJTc"><div class="rC1gMZh2lS">Средняя цена в аптеках города <div class="P04B2jt03T">1373 <span data-qa="RubleSymbol" class="AUyyIfIdwe">&nbsp;₽</span><div class="_6Qk10bzqpw"></div></div></div><div class="+oojcP4VGr">Цена на нашем сервисе</div><div class="Qu8ddQJxN7"><div class="c7cKMuatsc" data-qa="PriceFrom">от 1019<span data-qa="RubleSymbol" class="_7cdxc7BH4x">&nbsp;₽</span></div></div></div></div><div class="qjzbiOLgcZ"><div data-qa="PackSelect" class="NZCgZEELgq"><div class="VfJdpdVHW+ ObwXzYeArM"><button class="x5WvBaSsZu _4RDyxoEKBt OTewG0FZOr _023bG4DdUR"><div><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 HViMIznQQ9 QTJvdJcAyH">350 мл</div><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 _4CjH9W8Thf _6LVe57c+Rm">от 1019<span data-qa="RubleSymbol" class="AUyyIfIdwe">&nbsp;₽</span></div></div></button><button class="x5WvBaSsZu _4RDyxoEKBt R097RoqKzQ" tabindex="0"><div><span data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT YsZa4crPd3 uyedhD5kpH">Показать</span><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 _4CjH9W8Thf _6LVe57c+Rm">еще -1 вариант</div></div></button></div></div></div><div class="qjzbiOLgcZ"><div class="_5GuNx05SeB"><button data-loading="false" class="_2mtcUmC4Op _3cL2cz4T0Z HxYklcEom9" type="button" data-qa="Button"><span class="rodMHDr8L+"><span><span class="oXWPPnUIyl">Добавить в корзину</span></span><span></span></span></button><a data-loading="false" class="PpSkK8GxnE Ywqiqsc0B- _3cL2cz4T0Z C4J+ItyIHE" href="/cart/quick-buy/?add=168601.1&amp;map=1" data-qa="ButtonLink"><span class="rodMHDr8L+"><span>Быстрый заказ</span></span></a></div></div></div><div class="S-GErv6xDC T-ry+79xsz"><div class="_13+b9fPQLG"><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 YsZa4crPd3 ImeJ-MIFnl">Производитель:<br><a data-qa="Link" href="/manufacturer/vitauktprom_2212/" class="icfu36GV3+ ZlzMzd1RgX">Витаукт-Пром</a></div></div><div class="_13+b9fPQLG"><p data-qa="Text" class="mvuogjaPDB lAW7D+Upcw mRoeR60qmd qbvoVZSPvT xmwinzXDP5 YsZa4crPd3 ImeJ-MIFnl">Общее описание:</p><p data-qa="Text" class="mvuogjaPDB lAW7D+Upcw mRoeR60qmd qbvoVZSPvT xmwinzXDP5 YsZa4crPd3">Оказывают комплексное антипаразитарное действие на организм:...<br><a data-qa="Link" href="#instruction" class="icfu36GV3+ ZlzMzd1RgX S2PNbyZerc">Инструкция</a></p></div></div></div>
+
+<div class="_0MehyttbsN poL5qg-gs+"><h1 data-qa="Title" class="SeP8IA89RG zLJsG1b+y3 YQXBVXAY3p"><span class="OtQfVyMryo">911</span> <span data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT YsZa4crPd3 f8ZZRVTaCP">Гель, 100 мл, для суставов, бальзам с пчелиным ядом</span></h1><div class="Wo69d3F3z0 _8qtihvtXiG"><picture class="cOZloD97BC _8q3zthXhcR" data-qa="Picture"><source media="(max-width: 767px) and (min-resolution: 192dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2)" srcset="https://vseapteki.ru/cropping/thumbnails/101/8324/phoneMedium_retina/"><source media="(max-width: 767px)" srcset="https://vseapteki.ru/cropping/thumbnails/101/8324/phoneMedium_default/"><source media="(min-width: 768px) and (min-resolution: 192dpi), (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2)" srcset="https://vseapteki.ru/cropping/thumbnails/101/8324/tabletLarge_retina/"><source media="(min-width: 768px)" srcset="https://vseapteki.ru/cropping/thumbnails/101/8324/tabletLarge_default/"><img src="https://vseapteki.ru/cropping/thumbnails/101/8324/phoneMedium_default/" alt="911 - фото упаковки"></picture><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 eokgV588Xc qbvoVZSPvT xmwinzXDP5 _4CjH9W8Thf _9PQRa64GhD">Внешний вид товара может отличаться от изображения на сайте</div></div><div class="CBmBLKsrh0"><div class="qjzbiOLgcZ"><div class="RMOc0uhJTc"><div class="rC1gMZh2lS">Средняя цена в аптеках города <div class="P04B2jt03T">146,50 <span data-qa="RubleSymbol" class="AUyyIfIdwe">&nbsp;₽</span><div class="_6Qk10bzqpw"></div></div></div><div class="+oojcP4VGr">Цена на нашем сервисе</div><div class="Qu8ddQJxN7"><div class="c7cKMuatsc" data-qa="PriceFrom">от 109<span data-qa="RubleSymbol" class="_7cdxc7BH4x">&nbsp;₽</span></div></div></div></div><div class="qjzbiOLgcZ"><div data-qa="PackSelect" class="NZCgZEELgq"><div class="VfJdpdVHW+ ObwXzYeArM"><button class="x5WvBaSsZu _4RDyxoEKBt OTewG0FZOr _023bG4DdUR"><div><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 HViMIznQQ9 QTJvdJcAyH">100 мл</div><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 _4CjH9W8Thf _6LVe57c+Rm">от 109<span data-qa="RubleSymbol" class="AUyyIfIdwe">&nbsp;₽</span></div></div></button><button class="x5WvBaSsZu _4RDyxoEKBt R097RoqKzQ" tabindex="0"><div><span data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT YsZa4crPd3 uyedhD5kpH">Показать</span><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 _4CjH9W8Thf _6LVe57c+Rm">еще -1 вариант</div></div></button></div></div></div><div class="qjzbiOLgcZ"><div class="_5GuNx05SeB"><button data-loading="false" class="_2mtcUmC4Op _3cL2cz4T0Z HxYklcEom9" type="button" data-qa="Button"><span class="rodMHDr8L+"><span><span class="oXWPPnUIyl">Добавить в корзину</span></span><span></span></span></button><a data-loading="false" class="PpSkK8GxnE Ywqiqsc0B- _3cL2cz4T0Z C4J+ItyIHE" href="/cart/quick-buy/?add=100409.1&amp;map=1" data-qa="ButtonLink"><span class="rodMHDr8L+"><span>Быстрый заказ</span></span></a></div></div></div><div class="S-GErv6xDC T-ry+79xsz"><div class="_13+b9fPQLG"><div data-qa="Text" class="mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT xmwinzXDP5 YsZa4crPd3 ImeJ-MIFnl">Производитель:<br><a data-qa="Link" href="/manufacturer/korolevfarm_890/" class="icfu36GV3+ ZlzMzd1RgX">КоролевФарм</a></div></div><div class="_13+b9fPQLG"><p data-qa="Text" class="mvuogjaPDB lAW7D+Upcw mRoeR60qmd qbvoVZSPvT xmwinzXDP5 YsZa4crPd3 ImeJ-MIFnl">Общее описание:</p><p data-qa="Text" class="mvuogjaPDB lAW7D+Upcw mRoeR60qmd qbvoVZSPvT xmwinzXDP5 YsZa4crPd3">Гель-бальзам для суставов с ПЧЕЛИНЫМ ЯДОМ – рекомендуется ка...<br><a data-qa="Link" href="#instruction" class="icfu36GV3+ ZlzMzd1RgX S2PNbyZerc">Инструкция</a></p></div></div></div>
+
+"mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT YsZa4crPd3 f8ZZRVTaCP" == "mvuogjaPDB _5FYLL3zIa6 mRoeR60qmd qbvoVZSPvT YsZa4crPd3 f8ZZRVTaCP"
+
