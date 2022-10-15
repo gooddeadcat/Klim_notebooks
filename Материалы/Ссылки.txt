@@ -1,4 +1,4 @@
-В НИУ ВШЭ вы можете пользоваться WiFi 📡
+﻿В НИУ ВШЭ вы можете пользоваться WiFi 📡
 Сеть: HSE
 Логин: hseguest
 Пароль: hsepassword
@@ -16,7 +16,7 @@ https://github.com/karpovmax/DPO_Python_DA6
 https://anytask.org/ (hxZX0NX)
 https://books.toscrape.com/
 
-https://official.contest.yandex.ru/contest/40892/enter/
+https://official.contest.yandex.ru/contest/31042/enter/
 hse-da6-2022-2
 dRH7KEXszN
 
