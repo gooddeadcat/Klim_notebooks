@@ -21,12 +21,13 @@ hse-da6-2022-2
 dRH7KEXszN
 
 --Занятия--
-https://disk.yandex.ru/i/Bpel8amzbXx4nQ - 14.09.2022 - Основные понятия
-https://disk.yandex.ru/i/2xzvbz2QnEZ6GA - 17.09.2022 - Условия
-https://disk.yandex.ru/i/ouaPgi1weWaekQ - 21.09.2022 - Коллекции
-https://disk.yandex.ru/d/vKY6kdbe5KZXYw - 24.09.2022 - Семинар 1
-https://disk.yandex.ru/i/zFamyR08C0u-Og - 28.09.2022 - Вложенные коллекции, функции
-https://disk.yandex.ru/i/Q2CdGnw2YsBoTA - 01.10.2022 - Функции, рекурсия, регулярные выражения
-https://disk.yandex.ru/d/c1x5yLYu5UWp2A - 06.10.2022 - Регулярные выражения, работа с файлами
-https://disk.yandex.ru/d/ulxd-4Kuz6GdPw - 08.10.2022 - Классы
-https://disk.yandex.ru/i/wnblROSXrCNGfg - 12.10.2022 - Парсинг
+01. https://disk.yandex.ru/i/Bpel8amzbXx4nQ - 14.09.2022 - Основные понятия
+02. https://disk.yandex.ru/i/2xzvbz2QnEZ6GA - 17.09.2022 - Условия
+03. https://disk.yandex.ru/i/ouaPgi1weWaekQ - 21.09.2022 - Коллекции
+04. https://disk.yandex.ru/d/vKY6kdbe5KZXYw - 24.09.2022 - Семинар 1
+05. https://disk.yandex.ru/i/zFamyR08C0u-Og - 28.09.2022 - Вложенные коллекции, функции
+06. https://disk.yandex.ru/i/Q2CdGnw2YsBoTA - 01.10.2022 - Функции, рекурсия, регулярные выражения
+07. https://disk.yandex.ru/d/c1x5yLYu5UWp2A - 06.10.2022 - Регулярные выражения, работа с файлами
+08. https://disk.yandex.ru/d/ulxd-4Kuz6GdPw - 08.10.2022 - Классы
+09. https://disk.yandex.ru/i/wnblROSXrCNGfg - 12.10.2022 - Парсинг
+10. https://disk.yandex.ru/d/hH26DSCO0xpuaw - 15.10.2022 - Парсинг (таблицы)

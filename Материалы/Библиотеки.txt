@@ -1,0 +1,21 @@
+re - регулярные выражения
+math - математические функции
+numpy - работа с массивами
+collections (from collections import defaultdict) - работа с коллекциями (например, со словарями)
+os - работа с файлами
+matplotlib - визуализация
+
+-- Парсинг --
+requests - запросы
+BeautifulSoup (from bs4 import BeautifulSoup) - вёрстка
+pandas - работа с таблицами
+time - таймер
+tqdm (from tqdm.notebook import tqdm) - progress bar
+UserAgent (! pip install fake_useragent \n from fake_useragent import UserAgent) - как человек
+lxml - работа с html/xml
+
+
+-- Примеры --
+from collections import Counter
+from matplotlib.cbook import flatten
+
