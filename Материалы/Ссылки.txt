@@ -17,6 +17,7 @@ https://anytask.org/ (hxZX0NX)
 https://books.toscrape.com/
 
 https://official.contest.yandex.ru/contest/31042/enter/
+https://official.contest.yandex.ru/contest/29912/problems/ - побочный квест
 hse-da6-2022-2
 dRH7KEXszN
 
@@ -31,3 +32,5 @@ dRH7KEXszN
 08. https://disk.yandex.ru/d/ulxd-4Kuz6GdPw - 08.10.2022 - Классы
 09. https://disk.yandex.ru/i/wnblROSXrCNGfg - 12.10.2022 - Парсинг
 10. https://disk.yandex.ru/d/hH26DSCO0xpuaw - 15.10.2022 - Парсинг (таблицы)
+11. https://disk.yandex.ru/i/p5UrFXIBnKEsVA - 19.10.2022 - Парсинг (API)
+12. https://disk.yandex.ru/d/iXwCG1a68lDdog - 22.10.2022 - Парсинг (WebDriver)
