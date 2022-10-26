@@ -33,4 +33,4 @@ dRH7KEXszN
 09. https://disk.yandex.ru/i/wnblROSXrCNGfg - 12.10.2022 - Парсинг
 10. https://disk.yandex.ru/d/hH26DSCO0xpuaw - 15.10.2022 - Парсинг (таблицы)
 11. https://disk.yandex.ru/i/p5UrFXIBnKEsVA - 19.10.2022 - Парсинг (API)
-12. https://disk.yandex.ru/d/iXwCG1a68lDdog - 22.10.2022 - Парсинг (WebDriver)
+12. https://disk.yandex.ru/d/iXwCG1a68lDdog - 22.10.2022 - Парсинг (Selenium WebDriver)
