@@ -4,6 +4,7 @@ numpy - работа с массивами
 collections (from collections import defaultdict) - работа с коллекциями (например, со словарями)
 os - работа с файлами
 matplotlib - визуализация
+plotly - красивая визуализация
 
 -- Парсинг --
 requests - запросы
