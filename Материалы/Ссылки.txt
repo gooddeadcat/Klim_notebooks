@@ -8,7 +8,8 @@ https://colab.research.google.com/
 https://v.thecode.media/x0pw7
 https://pythontutor.ru/lessons/inout_and_arithmetic_operations/
 https://regex101.com/
-Репозитарий numpy-100 - судоку для программистов.
+Репозиторий numpy-100 - судоку по numpy в github
+100-pandas-puzzles - судоку по pandas в github
 
 --Главное--
 https://docs.google.com/spreadsheets/d/1Ioxsy-w7blueeKkMWauHP5eF5wtWEpW7DJvtAOxKKxU/edit#gid=174136418
