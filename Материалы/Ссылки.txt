@@ -10,6 +10,10 @@ https://pythontutor.ru/lessons/inout_and_arithmetic_operations/
 https://regex101.com/
 Репозиторий numpy-100 - судоку по numpy в github
 100-pandas-puzzles - судоку по pandas в github
+https://habr.com/ru/amp/post/596071/ - шпаргалка по Selenium
+https://medium.com/geekculture/web-scraping-cheat-sheet-2021-python-for-web-scraping-cad1540ce21c
+nbextensions - эддон для Юпитера
+
 
 --Главное--
 https://docs.google.com/spreadsheets/d/1Ioxsy-w7blueeKkMWauHP5eF5wtWEpW7DJvtAOxKKxU/edit#gid=174136418
@@ -36,3 +40,6 @@ dRH7KEXszN
 10. https://disk.yandex.ru/d/hH26DSCO0xpuaw - 15.10.2022 - Парсинг (таблицы)
 11. https://disk.yandex.ru/i/p5UrFXIBnKEsVA - 19.10.2022 - Парсинг (API)
 12. https://disk.yandex.ru/d/iXwCG1a68lDdog - 22.10.2022 - Парсинг (Selenium WebDriver)
+13. https://disk.yandex.ru/i/GVHWwFhKtOatFw - 26.10.2022
+14. https://disk.yandex.ru/d/TbfqvgtBZAEPeQ - 29.10.2022
+15. https://disk.yandex.ru/i/GZdqYvuny9Zojw - 02.11.2022
