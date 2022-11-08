@@ -21,6 +21,7 @@ https://miro.com/app/board/uXjVOzqV4V8=/?share_link_id=610014062406
 https://github.com/karpovmax/DPO_Python_DA6
 https://anytask.org/ (hxZX0NX)
 https://books.toscrape.com/
+https://www.kaggle.com/datasets
 
 https://official.contest.yandex.ru/contest/31042/enter/
 https://official.contest.yandex.ru/contest/29912/problems/ - побочный квест
