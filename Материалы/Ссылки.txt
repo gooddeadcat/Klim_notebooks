@@ -3,7 +3,7 @@
 Логин: hseguest
 Пароль: hsepassword
 
---Интересное--
+--Полезное--
 https://colab.research.google.com/
 https://v.thecode.media/x0pw7
 https://pythontutor.ru/lessons/inout_and_arithmetic_operations/
@@ -13,7 +13,8 @@ https://regex101.com/
 https://habr.com/ru/amp/post/596071/ - шпаргалка по Selenium
 https://medium.com/geekculture/web-scraping-cheat-sheet-2021-python-for-web-scraping-cad1540ce21c
 nbextensions - эддон для Юпитера
-
+dash.plotly.com
+matplotlib.org
 
 --Главное--
 https://docs.google.com/spreadsheets/d/1Ioxsy-w7blueeKkMWauHP5eF5wtWEpW7DJvtAOxKKxU/edit#gid=174136418
