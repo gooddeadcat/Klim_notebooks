@@ -15,6 +15,7 @@ https://medium.com/geekculture/web-scraping-cheat-sheet-2021-python-for-web-scra
 nbextensions - эддон для Юпитера
 dash.plotly.com
 matplotlib.org
+https://matplotlib.org/stable/tutorials/text/text_intro.html - Текст в matplotlib.
 
 --Главное--
 https://docs.google.com/spreadsheets/d/1Ioxsy-w7blueeKkMWauHP5eF5wtWEpW7DJvtAOxKKxU/edit#gid=174136418
