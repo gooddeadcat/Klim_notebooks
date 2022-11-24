@@ -1,0 +1,6 @@
+https://arabic-telethon.readthedocs.io/en/stable/extra/examples/telegram-client.html
+https://www.cyberforum.ru/python-api/thread2684243.html
+https://stackoverflow.com/questions/72846541/telethon-and-telebot-libraries-on-python-do-they-work-together
+https://qna.habr.com/q/828787
+https://skillbox.ru/media/code/parsim-dannye-v-telegram-na-python-chast-2-chitaem-i-analiziruem-soobshcheniya-iz-chatov/
+https://www.google.com/search?q=how+to+sync+telethon&oq=how+to+sync+telethon&aqs=chrome..69i57j0i22i30.10719j0j4&sourceid=chrome&ie=UTF-8
