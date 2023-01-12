@@ -24,3 +24,8 @@ lxml - работа с html/xml
 from collections import Counter
 from matplotlib.cbook import flatten
 
+-- Статистические --
+from statsmodels.distributions.empirical_distribution import ECDF
+from scipy.stats import kde
+from sklearn.preprocessing import power_transform - ML
+from sklearn.preprocessing import OneHotEncoder
